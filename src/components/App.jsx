@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
 import Notification from './Notification/Notification';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 
 const FEEDBACKS = ['Good', 'Neutral', 'Bad'];
 
@@ -41,6 +41,7 @@ const App = () => {
           options={feedbacks}
           total={countTotalFeedback}
           positivePercentage={countPositiveFeedbackPercentage}
+          feedbacks={feedbacks}
         />
       ) : (
         <Notification />
