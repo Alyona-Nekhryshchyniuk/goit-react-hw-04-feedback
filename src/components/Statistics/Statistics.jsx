@@ -18,7 +18,8 @@ const Statistics = ({ options, total, positivePercentage }) => {
 
   return (
     <Section title="Statistics">
-      {elementsGenerate(options)};<p>Total: {total()}</p>
+      {elementsGenerate(options)}
+      <p>Total: {total()}</p>
       <p>Positive feedback: {positivePercentage()}%</p>
     </Section>
   );
